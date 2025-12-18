@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak | VELOURA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="produk.html">Produk</a>
+        <a href="tentang_kami.html">Tentang Kami</a>
+      </div>
+      <div class="logo">VELOURA</div>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="kontak.html" class="active">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding: 100px 20px;">
+      <h1 class="section-title" style="text-align: center;">Hubungi Kami</h1>
+      <p class="section-subtitle">Siap memesan Veloura Hair Mist? Hubungi kami langsung melalui kontak di bawah ini.</p>
+      
+      <div style="max-width: 800px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+        <div>
+          <h2 style="color: var(--primary); margin-bottom: 20px;">Informasi Kontak</h2>
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--dark); margin-bottom: 10px;">Telepon / WhatsApp</h3>
+            <p style="color: var(--gray);">+62 812-3456-7890</p>
+          </div>
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--dark); margin-bottom: 10px;">Email</h3>
+            <p style="color: var(--gray);">info@veloura.com</p>
+          </div>
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--dark); margin-bottom: 10px;">Alamat</h3>
+            <p style="color: var(--gray);">Medan, Indonesia</p>
+          </div>
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--dark); margin-bottom: 10px;">Media Sosial</h3>
+            <a href="https://www.instagram.com/velouraaa.official/" style="font-size: 1.5rem; color: var(--primary);">
+              <i class="fab fa-instagram"></i> @velouraaa.official
+            </a>
+          </div>
+          <div>
+            <h3 style="color: var(--dark); margin-bottom: 10px;">Jam Operasional</h3>
+            <p style="color: var(--gray);">Senin - Jumat: 09.00 - 18.00 WIB</p>
+            <p style="color: var(--gray);">Sabtu: 09.00 - 15.00 WIB</p>
+            <p style="color: var(--gray);">Minggu: Libur</p>
+          </div>
+        </div>
+        
+        <div>
+          <h2 style="color: var(--primary); margin-bottom: 20px;">Form Pemesanan</h2>
+          <form style="display: flex; flex-direction: column; gap: 20px;">
+            <div>
+              <label style="display: block; margin-bottom: 8px; color: var(--dark); font-weight: 500;">Nama Lengkap*</label>
+              <input type="text" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif;" placeholder="Masukkan nama lengkap Anda">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 8px; color: var(--dark); font-weight: 500;">Nomor Telepon*</label>
+              <input type="tel" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif;" placeholder="0812xxxxxxx">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 8px; color: var(--dark); font-weight: 500;">Email*</label>
+              <input type="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif;" placeholder="email@example.com">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 8px; color: var(--dark); font-weight: 500;">Varian Aroma*</label>
+              <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif;">
+                <option>Chamomile Dreams</option>
+                <option>Rosemary Garden</option>
+              </select>
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 8px; color: var(--dark); font-weight: 500;">Jumlah*</label>
+              <input type="number" min="1" value="1" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif;">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 8px; color: var(--dark); font-weight: 500;">Alamat Lengkap*</label>
+              <textarea rows="3" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif;" placeholder="Alamat lengkap pengiriman"></textarea>
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 8px; color: var(--dark); font-weight: 500;">Pesan Tambahan (Opsional)</label>
+              <textarea rows="3" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif;" placeholder="Catatan khusus"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan via WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>VELOURA</h3>
+        <p>Hair Mist premium untuk rambut wangi, lembut, dan terawat sepanjang hari.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="produk.html">Produk</a></p>
+        <p><a href="tentang_kami.html">Tentang Kami</a></p>
+        <p><a href="kontak.html">Kontak</a></p>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p>WhatsApp: 08xxxxxxxx</p>
+        <p>Email: veloura@gmail.com</p>
+      </div>
+      <div>
+        <h3>Ikuti Kami</h3>
+        <a href="https://www.instagram.com/velouraaa.official/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 VELOURA. All Rights Reserved.</div>
+  </footer>
+  
+  <script>
+    // Set active nav
+    document.querySelectorAll('.navbar a').forEach(link => {
+      if (link.getAttribute('href') === 'kontak.html') {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

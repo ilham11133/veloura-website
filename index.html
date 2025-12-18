@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VELOURA | Hair Mist Premium</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="produk.html">Produk</a>
+        <a href="tentang_kami.html">Tentang Kami</a>
+      </div>
+      <div class="logo">VELOURA</div>
+      <div class="nav-right">
+        <a href="index.html" class="active">Home</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Konten tetap sama -->
+  <section class="hero">
+    <div>
+      <h1>RAMBUT WANGI & TERAWAT DENGAN VELOURA HAIR MIST</h1>
+      <p>Semprotkan kesegaran dan keharuman alami pada rambutmu. Veloura Hair Mist memberikan perawatan maksimal dengan aroma yang memikat.</p>
+      <div class="hero-buttons">
+        <a href="#kontak" class="btn btn-primary">Hubungi Kami</a>
+        <a href="produk.html" class="btn btn-outline">Lihat Produk</a>
+      </div>
+    </div>
+
+    <div class="slideshow">
+      <div class="slide active"><img src="img/Produk 1.jpg" alt="Veloura Product"></div>
+      <div class="slide"><img src="img/Produk 2.jpg" alt="Veloura Product"></div>
+      <div class="slide"><img src="img/Produk 3.jpg" alt="Veloura Product"></div>
+    </div>
+  </section>
+
+  <section>
+    <h1 class="section-title" style="text-align: center;">Manfaat Veloura Hair Mist</h1>
+    <p class="section-subtitle">Kami menghadirkan solusi perawatan rambut dengan formula terbaik yang menggabungkan keharuman dan nutrisi untuk rambut Anda.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Wangi Tahan Lama</h3>
+        <p>Aroma segar yang bertahan hingga 8 jam memberikan kepercayaan diri sepanjang hari.</p>
+      </div>
+      <div class="card">
+        <h3>Melindungi Rambut</h3>
+        <p>Formula khusus yang melindungi rambut dari polusi dan sinar UV.</p>
+      </div>
+      <div class="card">
+        <h3>Bahan Alami</h3>
+        <p>Dibuat dari ekstrak alami tanpa alkohol berlebih, aman untuk rambut sensitif.</p>
+      </div>
+      <div class="card">
+        <h3>Menutrisi Rambut</h3>
+        <p>Mengandung vitamin dan nutrisi yang membuat rambut lebih lembut dan berkilau.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="aroma">
+    <div>
+      <h1 class="section-title">Keharuman yang Menyegarkan</h1>
+      <p>Veloura Hair Mist hadir dengan berbagai pilihan aroma yang memikat, dari floral yang lembut hingga fruity yang segar. Setiap semprotan memberikan sensasi kesegaran yang tahan lama.</p>
+      <ul>
+        <li>Formula ringan yang tidak membuat rambut lepek</li>
+        <li>Praktis dibawa kemana saja dengan kemasan travel-friendly</li>
+        <li>Spray lembut yang tidak membuat rambut lengket</li>
+      </ul>
+      <a href="produk.html" class="btn btn-primary">Selengkapnya</a>
+    </div>
+    <img src="img/Produk 3.jpg" alt="Veloura Hair Mist">
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>VELOURA</h3>
+        <p>Hair Mist premium untuk rambut wangi, lembut, dan terawat sepanjang hari.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="produk.html">Produk</a></p>
+        <p><a href="tentang_kami.html">Tentang Kami</a></p>
+        <p><a href="kontak.html">Kontak</a></p>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p>WhatsApp: 08xxxxxxxx</p>
+        <p>Email: veloura@gmail.com</p>
+      </div>
+      <div>
+        <h3>Ikuti Kami</h3>
+        <a href="https://www.instagram.com/velouraaa.official/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 VELOURA. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 4000);
+    
+    // Set active nav based on current page
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.navbar a').forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

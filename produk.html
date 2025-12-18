@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk | VELOURA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="produk.html" class="active">Produk</a>
+        <a href="tentang_kami.html">Tentang Kami</a>
+      </div>
+      <div class="logo">VELOURA</div>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="product">
+    <div class="product-image">
+      <span class="arrow left" onclick="prevVariant()">‹</span>
+      <img id="productImg" src="img/Produk 3.jpg" alt="Veloura">
+      <span class="arrow right" onclick="nextVariant()">›</span>
+    </div>
+
+    <div class="product-info">
+      <h1 id="variantName">Chamomile Dreams</h1>
+      <div class="rating">★★★★☆ 4.5</div>
+      <div class="price">
+        <span id="price">Rp 20.000</span>
+        <small>/ 60ml</small>
+      </div>
+      <p id="variantDesc">Hair mist dengan aroma chamomile yang lembut dan menenangkan. Membantu menjaga kesegaran rambut sekaligus memberikan sensasi relaksasi sepanjang hari. Cocok untuk aktivitas harian maupun sebelum beristirahat.</p>
+
+      <div class="variant">
+        <button class="active" onclick="setVariant(0)">Chamomile Dreams</button>
+        <button onclick="setVariant(1)">Rosemary Garden</button>
+      </div>
+
+      <div class="qty">
+        <strong>Qty</strong>
+        <button onclick="qty-- && updateQty()">-</button>
+        <span id="qty">1</span>
+        <button onclick="qty++ && updateQty()">+</button>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-outline" onclick="toggleExtra('komposisi')">Lihat Komposisi</button>
+        <button class="btn btn-outline" onclick="toggleExtra('penggunaan')">Cara Penggunaan</button>
+        <a href="https://wa.me/62xxxxxxxxxx" class="btn btn-wa">Pesan via WhatsApp</a>
+      </div>
+
+      <div id="komposisi" class="extra">Aqua, Fragrance Premium, Chamomile Extract, Vitamin B5, Glycerin, UV Protection Agent.</div>
+      <div id="penggunaan" class="extra">Semprotkan pada rambut kering atau lembap dengan jarak ±15 cm. Gunakan kapan saja untuk kesegaran instan.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>VELOURA</h3>
+        <p>Hair Mist premium untuk rambut wangi, lembut, dan terawat sepanjang hari.</p>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p>WhatsApp: 08xxxxxxxx</p>
+        <p>Email: veloura@gmail.com</p>
+      </div>
+      <div>
+        <h3>Ikuti Kami</h3>
+        <a href="https://www.instagram.com/velouraaa.official/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 VELOURA</div>
+  </footer>
+
+  <script>
+    const variants = [
+      {
+        name: 'Chamomile Dreams',
+        img: 'img/Produk 3.jpg',
+        desc: 'Hair mist dengan aroma chamomile yang lembut dan menenangkan. Membantu menjaga kesegaran rambut sekaligus memberikan sensasi relaksasi sepanjang hari.'
+      },
+      {
+        name: 'Rosemary Garden',
+        img: 'img/Produk 2.jpg',
+        desc: 'Hair mist dengan aroma rosemary yang segar dan herbal. Membantu menyegarkan kulit kepala serta memberikan kesan bersih dan berenergi sepanjang hari.'
+      }
+    ];
+
+    let current = 0;
+    let qty = 1;
+
+    function setVariant(index){
+      current = index;
+      updateVariant();
+      document.querySelectorAll('.variant button').forEach((btn,i)=>{
+        btn.classList.toggle('active', i === index);
+      });
+    }
+
+    function updateVariant(){
+      document.getElementById('variantName').innerText = variants[current].name;
+      document.getElementById('variantDesc').innerText = variants[current].desc;
+      document.getElementById('productImg').src = variants[current].img;
+    }
+
+    function nextVariant(){ setVariant((current + 1) % variants.length); }
+    function prevVariant(){ setVariant((current - 1 + variants.length) % variants.length); }
+
+    function updateQty(){ 
+      if (qty < 1) qty = 1;
+      document.getElementById('qty').innerText = qty; 
+    }
+
+    function toggleExtra(id){
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+    
+    // Set active nav
+    document.querySelectorAll('.navbar a').forEach(link => {
+      if (link.getAttribute('href') === 'produk.html') {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
